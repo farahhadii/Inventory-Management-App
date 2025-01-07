@@ -1,0 +1,250 @@
+:root {
+  --primary-color: #4d7cfe;
+  --secondary-color: #ffffff;
+  --text-color: #333;
+  --bg-color: #f5f7fc;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  --heading-size-lg: 4rem;
+  --text-size-base: 1.8rem;
+  --stats-number-size: 2.8rem;
+  --nav-icon-size: 40px;
+  --section-padding: 5rem;
+  --max-hero-width: 1200px;
+  --icon-color: #4d7cfe; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+.home {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.navbar {
+  width: 100%;
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: default;      
+  user-select: none;    
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar .logo svg {
+  color: var(--icon-color);
+}
+
+.navbar .logo h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.navbar .home-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .home-links li {
+  margin-left: 1.5rem;
+}
+
+.navbar .register-btn,
+.navbar .--btn.--btn-primary {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  outline: none;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 80vh;
+  cursor: default;      
+  user-select: none;    
+}
+
+.hero .hero-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: var(--max-hero-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero .hero-text {
+  flex: 1 1 400px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero .hero-text h1 {
+  font-size: var(--heading-size-lg);
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.hero .hero-text p {
+  font-size: var(--text-size-base);
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.hero .hero-text .stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.hero .hero-image {
+  flex: 0 0 auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-image img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: var(--stats-number-size);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.stat p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.stat svg {
+  font-size: 2rem; 
+  color: var(--icon-color); 
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .hero .hero-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero .hero-text {
+    margin-bottom: 1rem;
+  }
+  .hero .hero-text h1 {
+    font-size: 3rem;
+  }
+  .hero .hero-text p {
+    font-size: 1.4rem;
+  }
+
+  .hero .hero-image img {
+    max-width: 500px; 
+    width: 100%;
+  }
+
+  .number-text h3 {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .hero .hero-inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero .hero-text h1 {
+    font-size: 2.4rem;
+  }
+  .hero .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .hero .hero-text .stats {
+    gap: 1rem;
+  }
+
+  .number-text h3 {
+    font-size: 2rem;
+  }
+
+  .hero .hero-image img {
+    max-width: 300px; 
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero .hero-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero .hero-image img {
+    max-width: 250px; 
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero .hero-text h1 {
+    font-size: 4.5rem;
+  }
+  .hero .hero-text p {
+    font-size: 2rem;
+  }
+  .number-text h3 {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .hero .hero-text h1 {
+    font-size: 5rem;
+  }
+  .hero .hero-text p {
+    font-size: 2.2rem;
+  }
+  .number-text h3 {
+    font-size: 3.6rem;
+  }
+}

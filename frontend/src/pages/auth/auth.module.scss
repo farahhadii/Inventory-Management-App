@@ -1,0 +1,170 @@
+.auth {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 2rem;
+}
+
+.form {
+  width: 100%;
+  max-width: 450px;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+h2 {
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-size: 1.3rem;
+  padding: 0.8rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 10px rgba(30, 60, 114, 0.2);
+  border-color: #1e3c72;
+}
+
+input:focus:invalid {
+  border-color: #ff7730;
+}
+
+.--btn-primary {
+  background: linear-gradient(135deg, #1E90FF, #6495ED);
+  font-size: 1.3rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.--btn-primary:hover {
+  background: linear-gradient(135deg, #1C86EE, #4682B4);
+}
+
+.--btn-block {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+
+  a {
+    color: #1e3c72;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #2a5298;
+  }
+}
+
+.links-left {
+  flex: 1;
+  text-align: left;
+}
+
+.links-right {
+  flex: 1;
+  text-align: right;
+}
+
+.register {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+
+  p {
+    display: inline;
+    margin-right: 0.5rem;
+    font-size: 1.4rem;
+    color: #555;
+  }
+
+  a {
+    color: #1e3c72;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #123456; 
+    }
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .form {
+    padding: 2rem;
+    max-width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+
+  .--btn-primary {
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+
+    .links-left, .links-right {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .register {
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+    p, a {
+      display: block;
+      text-align: center;
+    }
+  }
+}

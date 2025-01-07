@@ -1,0 +1,98 @@
+.edit-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  
+    .card {
+      max-width: 700px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      margin-bottom: 1.5rem;
+  
+      .profile-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+  
+        img {
+          width: 200px; 
+          height: 200px;
+          border-radius: 50%;
+          border: 2px solid #ccc;
+          object-fit: cover;
+        }
+      }
+  
+      .profile-data {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+  
+        p {
+          margin: 0.75rem 0;
+          padding-bottom: 0.5rem;
+          font-size: 1rem; 
+          color: #333;
+  
+          label {
+            font-weight: normal;
+            color: #000; 
+            margin-right: 0.5rem;
+          }
+  
+          input,
+          textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 0.25rem;
+          }
+  
+          code {
+            font-size: 1.5rem; 
+            color: #000; 
+            font-weight: normal;
+          }
+        }
+  
+        button {
+          margin-top: 1.5rem;
+          padding: 0.75rem 1.5rem; 
+          font-size: 1.1rem; 
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .edit-profile {
+      padding: 1rem;
+  
+      .card {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+      }
+  
+      .profile-photo {
+        margin-bottom: 1rem;
+      }
+  
+      .profile-photo img {
+        max-width: 150px; 
+        max-height: 150px;
+      }
+    }
+  }
