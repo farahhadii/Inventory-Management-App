@@ -139,13 +139,13 @@ const productSlice = createSlice({
       .addCase(createProduct.rejected, (state, action) => {
         state.isError = true;
         state.message = action.payload;
-        toast.error(`Failed to create product: ${action.payload}`);
+        toast.error("Failed to create product");
       })
       .addCase(getProducts.fulfilled, (state, action) => {
         if (Array.isArray(action.payload)) {
           state.products = action.payload;
         } else {
-          console.error("Invalid product data:", action.payload);
+          console.error("Invalid product data");
           state.products = [];
         }
         state.isSuccess = true;
@@ -167,7 +167,7 @@ const productSlice = createSlice({
       .addCase(deleteProduct.rejected, (state, action) => {
         state.isError = true;
         state.message = action.payload;
-        toast.error(`Failed to delete product: ${action.payload}`);
+        toast.error("Failed to delete product");
       })
       .addCase(getProduct.fulfilled, (state, action) => {
         state.product = action.payload;
@@ -192,7 +192,7 @@ const productSlice = createSlice({
       .addCase(updateProduct.rejected, (state, action) => {
         state.isError = true;
         state.message = action.payload;
-        toast.error(`Failed to update product: ${action.payload}`);
+        toast.error("Failed to update product");
       });
   },
 });
